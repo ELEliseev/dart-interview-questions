@@ -4,6 +4,13 @@ class A {
   final String c;
 
   A(this.a, this.b, this.c);
+
+  bool operator ==(Object other) {
+    return other is A &&
+        this.a == other.a &&
+        this.b == other.b &&
+        this.c == other.c;
+  }
 }
 
 class B {
